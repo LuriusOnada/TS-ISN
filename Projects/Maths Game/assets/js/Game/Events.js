@@ -22,8 +22,7 @@ Events.loadEvents = () =>
 		{
 			if (Events.status.konami_status == Events.status.konami.length)
 			{
-				Game.setDifficulty("ultra")
-				Game.start()
+				$("#dropdown").append("<option value='ultra'>Ultra</option>")
 			}
 		}
 	})

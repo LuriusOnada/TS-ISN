@@ -2,6 +2,7 @@
 // VERSION 1.01, latest updated: 25/03/2017
 // TARTIERE Kevin & ARNAUD Louis, <ticubius@gmail.com>
 
+
 var Game = {}
 
 
@@ -152,6 +153,7 @@ Game.start = () =>
 	
 	Game.status.hasStarted = true
 	
+	Game.setDifficulty($(".dropdown").val())
 	Player.setLives(Game.settings.lives)
 	Game.generateNewRound()
 	
@@ -172,8 +174,9 @@ Game.stop = () =>
 	OP.clearMemory()
 	UI.setHealthDisplay()
 	UI.resetTimer()
+	UI.showDropdown()
 
-	return true
+	return true	
 }
 
 Game.checkValue = () =>

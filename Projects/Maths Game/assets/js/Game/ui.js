@@ -122,3 +122,13 @@ UI.resetTimer = () =>
 
 	return true
 }
+
+UI.showDropdown = () =>
+{
+	$(".dropdown").removeClass('hidden')
+}
+
+UI.hideDropdown = () =>
+{
+	$(".dropdown").addClass('hidden')
+}
